@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgCabecera"
         android:layout_width="match_parent"
         android:layout_height="190dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,20 +19,21 @@
         app:srcCompat="@drawable/cabecera" />
 
     <LinearLayout
-        android:id="@+id/lnView"
+        android:id="@+id/lnViewCentral"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lnViewFinal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView">
+        app:layout_constraintTop_toBottomOf="@id/imgCabecera">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cvArtistas"
             android:layout_width="match_parent"
             android:layout_height="110dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginVertical="30dp"
             app:cardCornerRadius="16dp"
             app:cardBackgroundColor="@color/primary">
 
@@ -68,6 +69,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cvAlbumes"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:layout_marginBottom="30dp"
@@ -106,6 +108,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cvColeccionistas"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:layout_marginBottom="30dp"
@@ -148,16 +151,19 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/lnViewFinal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lnViewCentral"
         android:orientation="horizontal"
         android:gravity="center"
-        android:paddingBottom="10dp">
+        android:paddingVertical="10dp">
 
         <Button
+            android:id="@+id/btnCrearAlbum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primary"
@@ -170,6 +176,7 @@
         </Button>
 
         <Button
+            android:id="@+id/btnCrearTrack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primary"
